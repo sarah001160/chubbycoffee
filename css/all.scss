@@ -23,25 +23,18 @@
 
 /*class for jQuery*/
 
-.animate{
+.animate{ /*位移的動畫*/
     opacity:0;
     transform:translateY(50px);
     transition:all 2s;
 }
-.fadeIn{
+.fadeIn{ /*淡入效果*/
     opacity:1;
     transform:translateY(0px);
 }
-.inverse{
-    transform:rotateX(180deg);
-}
 
+/*--------全部基本設定----------*/
 
-/*basic setting*/
-
-.font-style{
-    font-family:新細明體;
-}
 
 .f-huge{
     font-size:50px;
@@ -57,46 +50,32 @@
 html, body {
     position: relative;
     height: 100%;
-  }
-  body {
     font-family:微軟正黑體,Helvetica Neue, Helvetica, Arial, sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     color:#000;
     margin: 0;
     padding: 0;
   }
- 
   
-/*main setting for chubby coffee homepage*/
+  
+/*----------首頁頁面--------------*/
 .header{
+    @include pad{
+        height:auto;
+     }
+     @include mobile{
+         height:auto;
+         padding-bottom:10px;
+     }
     box-sizing:border-box;
     width:100%;
     height:150px;
     background:black;
     position:relative;
     padding-bottom:30px;
-   
-   
-    @include pad{
-       height:300px;
-    }
-    @include mobile{
-        height:auto;/*先讓高度縮小漢堡選單*/
-        padding-bottom:10px;
-    }
-
-
     .wrap{
         box-sizing:border-box;
         width:100%;
-        .openmenu{
-            position:absolute;
-            top:100px;
-            left:50px;
-            width:80px;
-            height:30px;
-            color:white;
-        }
        .logo{
            width:100px;
            height:120px;
@@ -118,10 +97,7 @@ html, body {
          margin-left:30%;
         }
        }
-     
-    
-      
-       .linkbar{
+       .linkbar{ 
         width:90%;
         margin-top:20px;
         float:right;
@@ -197,9 +173,7 @@ html, body {
             }
         }
         
-       
-       }
-       
+       }  
     }
 }
 
@@ -266,7 +240,7 @@ html, body {
             display:block;
             height:60px;
             font-size:48px;
-           text-align:center;
+            text-align:center;
             color:#330000;
         }
         .container{
@@ -329,7 +303,7 @@ html, body {
             .intro-area{
                 height:auto;
                 margin:0 5%;
-                padding:60px 0px 100px 0;
+                padding:10px 0 100px 0;
                 text-align:center;
                 .intro-card{
                     width:31%;
@@ -442,44 +416,49 @@ html, body {
 
 
 
-/*-----------關於本店  about chubby coffee--------------*/
+/*-----------關於本店-------------*/
 
 .aboutchubby-content{
-    @include pad{}/*尚未設定*/
-    @include mobile{}/*尚未設定*/
+    height:auto;
     padding:50px;
     h2{
         font-weight: bolder;
         font-size:30px;
         margin:10px 0;
     }
-    img{
-        @include pad{}/*尚未設定*/
+   
+   .article{
+       @include mobile{
+           padding:30px;
+           border:none;
+       }
+       padding:30px 50px 80px 10px;
+       border:1px solid black;
+       width:100%;
+       height:auto;
+       img{
         @include mobile{
             width:100%;
-            float:none;
+           float:none;
             margin-bottom:30px;
-        }/*尚未設定*/
+        }
         width:300px;
         height:500px;
         margin-top:30px;
         margin-left:10px;
+        float:left;
         
     }
-   .article{
-       @include pad{}/*尚未設定*/
-       @include mobile{
-           padding:30px;
-           border:none;
-       }/*尚未設定*/
-       padding:30px 50px 80px 320px;
-       border:1px solid black;
-       width:100%;
-       height:auto;
        p{
+          @include mobile{
+            margin-left:0;
+            }
            line-height:1.5;
            font-size:22px;
            text-indent:44px;
+           margin-left:330px;
+           margin-top:30px;
+          
        }
    }
 }
@@ -490,7 +469,7 @@ html, body {
 
 
 
-/*-------------門市據點的頁面，記得放googlemap-------*/
+/*-------------門市據點的頁面------*/
 
 .location-content{
     padding:50px;
@@ -507,7 +486,7 @@ html, body {
 }
 
 
-/*--------------------最新消息頁面the news content-----------------------------*/
+/*-------------最新消息頁面---------*/
 
 .news-content{
     height:300px;
@@ -521,7 +500,7 @@ html, body {
 }
 
 
-/*-----------商品頁面product page-------*/
+/*-----------商品頁面-------*/
 
 .product-content{
     width:100%;
@@ -530,28 +509,23 @@ html, body {
     position:relative;
     background:url('https://images.unsplash.com/photo-1506619216599-9d16d0903dfd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1049&q=80');
     background-repeat:no-repeat;
-    #myVideo {
+    #myVideo {/*mp4背景id*/
+        @include pad{
+            display:none;
+          }
+        @include mobile{
+            display:none;
+          }
+          
         right: 0;
         bottom: 0;
         width:100%; 
         min-height:100%;
         box-sizing:border-box;
-        @include mobile{
-          display:none;
-        }
-        @include pad{
-            display:none;
-          }
+      
       }
       .product-wall{
-          position:absolute;
-          top:0;
-          left:0;
-          z-index:1;
-          width:100%;
-          height:300px;
-          font-size:20px;
-          @include pad{
+         @include pad{
             position:relative;
             display:block;
             height:auto; 
@@ -561,6 +535,13 @@ html, body {
               display:block;
               height:auto;
           }
+          position:absolute;
+          top:0;
+          left:0;
+          z-index:1;
+          width:100%;
+          height:300px;
+          font-size:20px;
           h2{
             font-size:30px;
             }
@@ -569,6 +550,9 @@ html, body {
               position:absolute;
           }
           label{
+            @include mobile{
+                width:100px;
+            }
               width:120px;
               height:40px;
               text-align:center;
@@ -577,15 +561,13 @@ html, body {
               border-top:1px solid rgba(255,255,255,0.3);
               border-left:1px solid rgba(255,255,255,0.3);
               box-shadow:-2px -2px  rgba(255,255,255,0.6);
-              @include mobile{
-                  width:100px;
-              }
+            
               
           }
           #radiomilk:checked ~ .tab-group .tab-milk, #radiocoldbrew:checked ~ .tab-group .tab-coldbrew,#radioberry:checked ~ .tab-group .tab-berry{
               background:rgba(255,88,9,0.5);
               color:white;
-          }
+          }/*For頁籤切換內容*/
       
           .content{             
               display:none;
@@ -595,7 +577,6 @@ html, body {
               padding:40px 50px 40px 60px;
               background:rgba(255,255,255,0.3);
               box-shadow:-2px 2px 5px rgba(255,255,255,0.6);
-
           }
           #radiomilk:checked ~ .content-group .c-milk, #radiocoldbrew:checked ~ .content-group .c-coldbrew, #radioberry:checked ~ .content-group .c-berry, {
               display:block;
@@ -603,7 +584,25 @@ html, body {
           }
           
           .c-milk,.c-coldbrew,.c-berry{
+            @include mobile{
+                ul{
+                    float:none;
+                    margin:5px;
+                    li{
+                        line-height:1.5;
+                    }
+                }
+            }
+            @include pad{
               ul{
+                  float:none;
+                  margin:5px;
+                  li{
+                      line-height:2.9;
+                  }
+              }
+            }
+            ul{
                   float:left;
                   margin-right:130px;
                   margin-left:50px;
@@ -611,26 +610,12 @@ html, body {
                       display:flex;
                       flex-direction:row;
                       line-height:3.5;
-                  }
-              }
-              @include mobile{
-                  ul{
-                      float:none;
-                      margin:5px;
-                      li{
-                          line-height:1.5;
+                      p{
+                          margin-left:10px;
                       }
                   }
-              }
-              @include pad{
-                ul{
-                    float:none;
-                    margin:5px;
-                    li{
-                        line-height:2.9;
-                    }
-                }
             }
+             
           }
          
       }
