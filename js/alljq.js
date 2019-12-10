@@ -48,14 +48,4 @@ $('document').ready(function(){
  
 
 
-//$('document').ready(function(){
-   
-      //  $('.dropdown').slideUp();
-  //      $('.click').click(function(e){
-    //        $(this).find('.dropdown').slideToggle();
-      //      $(this).find('.dropdown').sibiling().slideUp();
-           
-       // })
-
-//});
 
