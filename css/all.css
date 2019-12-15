@@ -147,11 +147,15 @@ html, body {
       @media (min-width: 320px) and (max-width: 640px) {
         .header .wrap .linkbar {
           width: 100%;
-          float: none; } }
+          float: none;
+          height: 150px;
+          display: block; } }
       @media (min-width: 640px) and (max-width: 960px) {
         .header .wrap .linkbar {
           width: 100%;
-          float: none; } }
+          float: none;
+          height: 150px;
+          display: block; } }
       .header .wrap .linkbar ul {
         -webkit-box-sizing: border-box;
         box-sizing: border-box;

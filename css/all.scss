@@ -109,10 +109,14 @@ html, body {
         @include mobile{
             width:100%;
             float:none;
+            height:150px;
+            display:block;
         }
         @include pad{
             width:100%;
             float:none;
+            height:150px;
+            display:block;
         }
     
         ul{
@@ -122,6 +126,7 @@ html, body {
             display:flex;
             @include pad{
                 display:flex;
+
             }
             @include mobile{
                width:100%;
