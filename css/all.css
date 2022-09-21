@@ -78,6 +78,7 @@ table {
 
 html, body {
   position: relative;
+  max-width: 100%;
   height: 100%;
   font-family: 微軟正黑體,Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 16px;
@@ -89,7 +90,7 @@ html, body {
 .header {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 100%;
   height: 150px;
   background: black;
   position: relative;
@@ -104,7 +105,7 @@ html, body {
   .header .wrap {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    width: 100%; }
+    max-width: 100%; }
     .header .wrap .logo {
       width: 100px;
       height: 120px;
@@ -209,20 +210,23 @@ html, body {
 .banner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 100%;
+  max-width: 100%;
   height: 800px;
-  background: balck; }
+  background: black; }
   @media (min-width: 640px) and (max-width: 960px) {
     .banner {
       height: 600px;
-      margin-top: -100px; } }
+      margin-top: -100px;
+      max-width: 100%;
+      overflow-x: hidden; } }
   @media (min-width: 320px) and (max-width: 640px) {
     .banner {
       height: 400px; } }
   .banner .swiper-container {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
-    background: black; }
+    overflow-x: hidden;
+    /*background:black;*/ }
     .banner .swiper-container .swiper-wrapper .swiper-slide {
       text-align: center;
       font-size: 18px;
@@ -306,7 +310,7 @@ html, body {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
   .parabox .wrap h2 {
-    width: 100%;
+    max-width: 100%;
     height: 50px; }
   .parabox .wrap .intro-area {
     height: auto;
@@ -323,13 +327,13 @@ html, body {
       font-size: 20px; }
       @media (min-width: 640px) and (max-width: 960px) {
         .parabox .wrap .intro-area .intro-card {
-          width: 90%;
+          max-width: 90%;
           margin: 0;
           margin: 30px 5%; } }
       @media (min-width: 320px) and (max-width: 640px) {
         .parabox .wrap .intro-area .intro-card {
           display: block;
-          width: 90%;
+          max-width: 90%;
           margin: 30px 5%; } }
       .parabox .wrap .intro-area .intro-card img {
         width: 130px;

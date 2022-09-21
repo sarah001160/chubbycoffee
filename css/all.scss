@@ -49,6 +49,7 @@
 
 html, body {
     position: relative;
+    max-width:100%;
     height: 100%;
     font-family:微軟正黑體,Helvetica Neue, Helvetica, Arial, sans-serif;
     font-size: 16px;
@@ -68,14 +69,14 @@ html, body {
          padding-bottom:10px;
      }
     box-sizing:border-box;
-    width:100%;
+    max-width:100%;
     height:150px;
     background:black;
     position:relative;
     padding-bottom:30px;
     .wrap{
         box-sizing:border-box;
-        width:100%;
+        max-width:100%;
        .logo{
            width:100px;
            height:120px;
@@ -190,18 +191,21 @@ html, body {
     @include pad{
         height:600px;
         margin-top:-100px;
+        max-width:100%;
+        overflow-x:hidden;
     }
     @include mobile{
         height:400px;
     }
       box-sizing: border-box;
-      width:100%;
+      max-width:100%;
       height:800px;
-      background:balck;
+      background:black;
       .swiper-container {
-          width: 100%;
+          max-width: 100%;
           height: 100%;
-          background:black;
+           overflow-x: hidden;
+          /*background:black;*/
           .swiper-wrapper{
             .swiper-slide {
                 text-align: center;
@@ -221,7 +225,7 @@ html, body {
                 -webkit-align-items: center;
                 align-items: center;
                img{
-                   width:100%;
+                  width:100%;
                   height:800px;
                   box-sizing:border-box;
                     @include pad{
@@ -306,7 +310,7 @@ html, body {
         box-sizing:border-box;
         .wrap{
             h2{
-                width:100%;
+                max-width:100%;
                 height:50px;
             }
             .intro-area{
@@ -323,13 +327,13 @@ html, body {
                     position: relative;
                     font-size:20px;
                     @include pad{
-                        width:90%;
+                        max-width:90%;
                         margin:0;
                         margin:30px 5%;
                     }
                     @include mobile{
                         display:block;
-                        width:90%;
+                        max-width:90%;
                         margin:30px 5%;
                     }
                     img{
