@@ -23,7 +23,7 @@
 
 /*class for jQuery*/
 
-.animate{ /*位移的動畫*/
+.jqanimate{ /*位移的動畫*/
     opacity:0;
     transform:translateY(50px);
     transition:all 2s;
@@ -34,7 +34,9 @@
 }
 
 /*--------全部基本設定----------*/
-
+.text-light{
+    color:white;
+}
 
 .f-huge{
     font-size:50px;
@@ -326,15 +328,16 @@ html, body {
                     display:inline-block;
                     position: relative;
                     font-size:20px;
+                    color:white;
                     @include pad{
-                        max-width:90%;
+                        width:90%;
                         margin:0;
                         margin:30px 5%;
                     }
                     @include mobile{
                         display:block;
-                        max-width:90%;
-                        margin:30px 5%;
+                        width:90%;
+                        margin:30px 5%;/*上下  左右*/
                     }
                     img{
                         width:130px;
