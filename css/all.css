@@ -321,7 +321,7 @@ html, body {
     padding: 40px 0 80px 0;
     text-align: center; }
     .parabox .wrap .intro-area .intro-card {
-      width: 31%;
+      min-width: 31%;
       margin-right: 10px;
       height: 380px;
       border: 1px solid white;
@@ -331,13 +331,13 @@ html, body {
       color: white; }
       @media (min-width: 640px) and (max-width: 960px) {
         .parabox .wrap .intro-area .intro-card {
-          width: 90%;
+          min-width: 90%;
           margin: 0;
           margin: 30px 5%; } }
       @media (min-width: 320px) and (max-width: 640px) {
         .parabox .wrap .intro-area .intro-card {
           display: block;
-          width: 90%;
+          min-width: 90%;
           margin: 30px 5%;
           /*上下  左右*/ } }
       .parabox .wrap .intro-area .intro-card img {

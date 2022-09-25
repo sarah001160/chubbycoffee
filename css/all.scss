@@ -321,7 +321,7 @@ html, body {
                 padding:40px 0 80px 0;
                 text-align:center;
                 .intro-card{
-                    width:31%;
+                    min-width:31%;
                     margin-right:10px;
                     height:380px;
                     border:1px solid white;
@@ -330,13 +330,13 @@ html, body {
                     font-size:20px;
                     color:white;
                     @include pad{
-                        width:90%;
+                        min-width:90%;
                         margin:0;
                         margin:30px 5%;
                     }
                     @include mobile{
                         display:block;
-                        width:90%;
+                        min-width:90%;
                         margin:30px 5%;/*上下  左右*/
                     }
                     img{
